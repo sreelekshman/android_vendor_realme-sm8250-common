@@ -101,6 +101,50 @@ android_app_import {
 }
 
 android_app_import {
+	name: "DeviceInfo",
+	owner: "realme",
+	apk: "proprietary/system_ext/app/DeviceInfo/DeviceInfo.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	system_ext_specific: true,
+}
+
+android_app_import {
+	name: "ImsRcsService",
+	owner: "realme",
+	apk: "proprietary/system_ext/app/ImsRcsService/ImsRcsService.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	system_ext_specific: true,
+}
+
+android_app_import {
+	name: "QtiTelephony",
+	owner: "realme",
+	apk: "proprietary/system_ext/app/QtiTelephony/QtiTelephony.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	system_ext_specific: true,
+}
+
+android_app_import {
+	name: "embms",
+	owner: "realme",
+	apk: "proprietary/system_ext/app/embms/embms.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	system_ext_specific: true,
+}
+
+android_app_import {
 		name: "HotwordEnrollmentOKGoogleHEXAGON",
 		owner: "realme",
 		apk: "proprietary/product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk",
@@ -264,9 +308,30 @@ dex_import {
 }
 
 dex_import {
+	name: "embmslibrary",
+	owner: "realme",
+	jars: ["proprietary/system_ext/framework/embmslibrary.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
 	name: "qcrilhook",
 	owner: "realme",
 	jars: ["proprietary/system_ext/framework/qcrilhook.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "qti-telephony-common",
+	owner: "realme",
+	jars: ["proprietary/system_ext/framework/qti-telephony-common.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.ims.callcapability-V1.0-java",
+	owner: "realme",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.callcapability-V1.0-java.jar"],
 	system_ext_specific: true,
 }
 
@@ -292,6 +357,13 @@ dex_import {
 }
 
 dex_import {
+	name: "vendor.qti.ims.connection-V1.0-java",
+	owner: "realme",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
 	name: "vendor.qti.ims.factory-V1.0-java",
 	owner: "realme",
 	jars: ["proprietary/system_ext/framework/vendor.qti.ims.factory-V1.0-java.jar"],
@@ -306,9 +378,73 @@ dex_import {
 }
 
 dex_import {
+	name: "vendor.qti.ims.factory-V2.0-java",
+	owner: "realme",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.ims.factory-V2.1-java",
+	owner: "realme",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.factory-V2.1-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.ims.factory-V2.2-java",
+	owner: "realme",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.factory-V2.2-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
 	name: "vendor.qti.ims.rcsconfig-V1.0-java",
 	owner: "realme",
 	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar"],
+	system_ext_specific: true,
+}
+
+
+dex_import {
+	name: "vendor.qti.ims.rcssip-V1.0-java",
+	owner: "realme",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcssip-V1.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.ims.rcssip-V1.1-java",
+	owner: "realme",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcssip-V1.1-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.ims.rcssip-V1.2-java",
+	owner: "realme",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcssip-V1.2-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.ims.rcsuce-V1.0-java",
+	owner: "realme",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsuce-V1.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.ims.rcsuce-V1.1-java",
+	owner: "realme",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsuce-V1.1-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.ims.rcsuce-V1.2-java",
+	owner: "realme",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsuce-V1.2-java.jar"],
 	system_ext_specific: true,
 }
 
