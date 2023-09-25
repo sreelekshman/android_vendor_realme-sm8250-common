@@ -101,6 +101,30 @@ android_app_import {
 }
 
 android_app_import {
+	name: "HotwordEnrollmentOKGoogleHEXAGON",
+	owner: "realme",
+	apk: "proprietary/product/priv-app/HotwordEnrollmentOKGoogleHEXAGON.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	product_specific: true,
+}
+
+android_app_import {
+	name: "HotwordEnrollmentXGoogleHEXAGON",
+	owner: "realme",
+	apk: "proprietary/product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	product_specific: true,
+}
+
+android_app_import {
 	name: "DeviceInfo",
 	owner: "realme",
 	apk: "proprietary/system_ext/app/DeviceInfo/DeviceInfo.apk",
@@ -145,27 +169,13 @@ android_app_import {
 }
 
 android_app_import {
-	name: "MotoDolbyDax3",
+	name: "QtiTelephonyService",
 	owner: "realme",
-	apk: "proprietary/system_ext/priv-app/MotoDolbyDax3/MotoDolbyDax3.apk",
-	overrides: ["MusicFX"],
+	apk: "proprietary/system_ext/app/QtiTelephonyService/QtiTelephonyService.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
 	},
-	privileged: true,
-	system_ext_specific: true,
-}
-
-android_app_import {
-	name: "MotorolaSettingsProvider",
-	owner: "realme",
-	apk: "proprietary/system_ext/priv-app/MotorolaSettingsProvider/MotorolaSettingsProvider.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
 	system_ext_specific: true,
 }
 
@@ -173,41 +183,6 @@ android_app_import {
 	name: "embms",
 	owner: "realme",
 	apk: "proprietary/system_ext/app/embms/embms.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	system_ext_specific: true,
-}
-
-android_app_import {
-		name: "HotwordEnrollmentOKGoogleHEXAGON",
-		owner: "realme",
-		apk: "proprietary/product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk",
-		certificate: "platform",
-		dex_preopt: {
-			enabled: false,
-		},
-		privileged: true,
-		product_specific: true,
-}
-
-android_app_import {
-		name: "HotwordEnrollmentXGoogleHEXAGON",
-		owner: "realme",
-		apk: "proprietary/product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk",
-		certificate: "platform",
-		dex_preopt: {
-			enabled: false,
-		},
-		privileged: true,
-		product_specific: true,
-}
-
-android_app_import {
-	name: "QtiTelephonyService",
-	owner: "realme",
-	apk: "proprietary/system_ext/app/QtiTelephonyService/QtiTelephonyService.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -234,6 +209,31 @@ android_app_import {
 	dex_preopt: {
 		enabled: false,
 	},
+	system_ext_specific: true,
+}
+
+android_app_import {
+	name: "MotoDolbyDax3",
+	owner: "realme",
+	apk: "proprietary/system_ext/priv-app/MotoDolbyDax3/MotoDolbyDax3.apk",
+	overrides: ["MusicFX"],
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	system_ext_specific: true,
+}
+
+android_app_import {
+	name: "MotorolaSettingsProvider",
+	owner: "realme",
+	apk: "proprietary/system_ext/priv-app/MotorolaSettingsProvider/MotorolaSettingsProvider.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
 	system_ext_specific: true,
 }
 
@@ -412,13 +412,6 @@ dex_import {
 }
 
 dex_import {
-	name: "vendor.qti.ims.callcapability-V1.0-java",
-	owner: "realme",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.callcapability-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
 	name: "vendor.qti.hardware.alarm-V1.0-java",
 	owner: "realme",
 	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar"],
@@ -426,9 +419,16 @@ dex_import {
 }
 
 dex_import {
-	name: "vendor.qti.hardware.",
+	name: "vendor.qti.hardware.sensorscalibrate-V1.0-java",
 	owner: "realme",
 	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.ims.callcapability-V1.0-java",
+	owner: "realme",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.callcapability-V1.0-java.jar"],
 	system_ext_specific: true,
 }
 
@@ -487,7 +487,6 @@ dex_import {
 	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar"],
 	system_ext_specific: true,
 }
-
 
 dex_import {
 	name: "vendor.qti.ims.rcssip-V1.0-java",
@@ -602,3 +601,4 @@ prebuilt_etc_xml {
 	sub_dir: "vintf/manifest",
 	device_specific: true,
 }
+
